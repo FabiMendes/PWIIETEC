@@ -9,3 +9,17 @@ const mendes = express();
 mendes.listen(3000, ()=>{
     console.log('TUDO BACANA!');
 });
+
+const express = require('express');
+const routesCategoria = require('./route/routesCategorias');
+
+
+const app = express();
+console.log('teste Github');
+
+app.use('/', routesCategoria);
+
+
+app.listen(3000, ()=>{
+    console.log('SERVIDOR RODANDO EM - http://localhost:3000');
+});
